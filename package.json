@@ -10,6 +10,10 @@
     "start": "node index.js",
     "poststart": "echo \"Perintah start selesai dijalankan!\""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdrhmnn/belajar-nodejs-npm.git"
+  },
   "keywords": [
     "belajar",
     "nodejs",
