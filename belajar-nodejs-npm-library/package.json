@@ -1,0 +1,18 @@
+{
+  "name": "belajar-nodejs-npm-library-abdu",
+  "version": "1.1.1",
+  "description": "Mencoba membuat package dan publish di npmjs.com",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "belajar",
+    "package",
+    "npm",
+    "nodejs"
+  ],
+  "author": "abdu",
+  "license": "ISC"
+}

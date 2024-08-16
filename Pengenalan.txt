@@ -1,0 +1,49 @@
+untuk membuat project npm itu jalankan di terminal
+`npm init`
+
+file package.json itu adalah project konfiguration node js nya
+jadi bisa ditambahkan informasi seperti name, version, git url, dll
+
+kalo ada file package.json itu akan dijalankan terlebih dahulu oleh node js
+baru setelahnya jalankan `main file` nya
+
+untuk merubah behaviour dari file .mjs menjadi .js maka tambahkan konfigurasi `type` di package.json
+
+bisa membuat alias name untuk run kode node js di tag `script`, untuk nama alias nya itu bebas bs diberikan
+nama apapun, untuk jalankan nya ketikan `npm run-script <aliasName>`
+tapi ada beberapa alias spesial yg tidak perlu pakai `run-script` untuk jalaninnya, seperti: start, version, dll
+ada juga alias yg akan dijalankan sebelum dan setelah alias spesial berjalan
+cukup tambahkan diawal alias nya `pre` untuk sebelum dan `post` untuk sesudah
+untuk jalankan cukup `npm <aliasSpesialName>`
+
+kita bisa membuat alias untuk mengekspos file js dengan menggunakan tag `exports`
+jadi alias yg dimasukkan ke dalam tag `exports` itu nantinya bisa me-load file js dgn cukup import alias name nya saja
+
+SEMANTIC VERSION
+1.0.3
+urutan pertama itu adalah MAJOR (artinya jika ada perubahan besar"an seperti perubahan API, fitur, dll)
+urutan kedua itu adalah MINOR (artinya jika ada penambahan fitur baru, perbaiki kompabilitas, dll)
+urutan ketiga itu adalah PATCH (artinya jika ada bug fixing)
+
+version depedency bisa dibuat seperti ini :
+x -> akan install dan update versi terbaru
+1.x -> akan instal dan update jika ada perubahan minor
+1.1.x -> akan install dan update jika ada perubahan patch
+~1.1.1 -> akan install dan update jika ada perubahan pada patch
+^1.1.1 -> akan install dan update jika ada perubahan pada minor dan patch
+
+untuk update version depedency yg kita pakai, use `npm update` untuk update semua depedency nya
+kalo mau singular `npm update <namaDepedency>`
+
+jenis depedency :
+- production depedency -> yaitu depedency yg di install dgn `npm install` dan msk ke tag `depedencies`
+di package.json, jenis depedency ini dibutuhkan ketika aplikasi berjalan
+- development depedency -> yaitu depedency yg di install dgn menambahkan `--save-dev` dan akan masuk ke tag
+devDepedencies di package.json, jenis depedency ini dibutuhkan khusus ketika proses development
+
+ketika ingin install depedency production atau development saja, cukup jalankan `npm install --production/--development`
+karena kalo pakai `npm install` itu akan install semua jenis depedency
+
+nama package harus unik
+untuk publish package kita sendiri itu kudu lewat terminal:
+`npm adduser`, namun jika sudah login lewat website nya maka tinggal publish aja lewat terminal

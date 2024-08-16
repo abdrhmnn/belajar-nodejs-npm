@@ -1,0 +1,32 @@
+{
+  "name": "belajar-nodejs-npm",
+  "version": "1.0.0",
+  "description": "belajar package manager node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runCoba": "node index.js",
+    "prestart": "echo \"Perintah start akan dijalankan!\"",
+    "start": "node index.js",
+    "poststart": "echo \"Perintah start selesai dijalankan!\""
+  },
+  "keywords": [
+    "belajar",
+    "nodejs",
+    "npm"
+  ],
+  "author": "abdu",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./write": "./Coba/index.js"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1"
+  },
+  "dependencies": {
+    "belajar-nodejs-npm-library-abdu": "^1.0.0",
+    "helmet": "^7.1.0"
+  }
+}
